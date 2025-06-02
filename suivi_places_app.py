@@ -14,7 +14,7 @@ else:
     st.error("Le fichier CSV est introuvable.")
     st.stop()
 
-st.title("📊 Suivi de tes places Parcoursup")
+st.title("Suivi des places en amont")
 
 # Formulaire pour ajouter une nouvelle entrée
 with st.form("formulaire"):
@@ -42,11 +42,11 @@ with st.form("formulaire"):
             st.success("Données enregistrées avec succès.")
 
 # Afficher les données
-st.subheader("📅 Historique des données")
+st.subheader("Historique")
 st.dataframe(df.sort_values(by="Date", ascending=False))
 
 # Choisir une ou plusieurs formations à afficher
-st.subheader("📈 Visualiser l'évolution")
+st.subheader("Guette l'ascension")
 formations = df.columns.tolist()
 formations.remove("Date")
 choix = st.multiselect("Choisis les formations à afficher :", formations, default=formations[:3])
