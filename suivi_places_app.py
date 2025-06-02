@@ -18,7 +18,7 @@ st.title("Suivi des places en amont")
 
 # Formulaire pour ajouter une nouvelle entrée
 with st.form("formulaire"):
-    st.subheader("📝 Entrer les places du jour")
+    st.subheader("Entrer les places du jour")
     today = datetime.today().strftime('%Y-%m-%d')
     date = st.text_input("Date (YYYY-MM-DD)", value=today)
 
